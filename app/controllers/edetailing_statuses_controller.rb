@@ -58,6 +58,6 @@ class EdetailingStatusesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def edetailing_status_params
-      params.require(:edetailing_status).permit(:mark, :product, :country, :framework, :state, :note,'last_change', 'last_change(i)', 'last_change(1i)', 'last_change(2i)', 'last_change(3i)')
+      params.require(:edetailing_status).permit(:mark, :product, :country, :framework, :state, :note,'last_change', 'last_change(i)', 'last_change(1i)', 'last_change(2i)', 'last_change(3i)', :project_manager)
     end
 end
