@@ -19,6 +19,8 @@
       <div class="clear"></div>
       </div>
     <div class="third_row form_row">
+    <%= f.label "Project Manager:" %>
+    <%= f.text_field :project_manager, :class => "project_manager_field" %>
     <%= f.label "Estado:" %>
     <%= f.select(:state, [['Finalizado', 0], ['En espera', 1], ['En progreso', 2], ['No empezado', 3]]) %>
       <div class="clear"></div>
