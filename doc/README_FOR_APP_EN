@@ -1,0 +1,67 @@
+Project installation
+
+1) Creating environment where we are going to work. (Ruby 4.0)
+
+   1.a) In case we've installed Ruby 1.9.3-p362:
+        rvm ruby-1.9.3-p362@project-control --create
+
+   1.b) If we have not installed Ruby 1.9.3-p362 then:
+        rvm install ruby-1.9.3-p362  (take a relaxing cup of café con leche)
+        BE SURE gem RAKE 10.1.0 is installed, otherwise:
+        1.b.1) rvm ruby-1.9.3-p362@global
+               gem uninstall rake
+               gem install rake -v 10.1.0
+   1.c) When the installation is finished:
+        rvm ruby-1.9.3-p362@project-control --create
+        to avoid having to change gemset manually, in project root folder:
+        echo 'rvm ruby-1.9.3-p362@project-control' > .rvmrc
+
+
+    Checking environment is ready:
+        gem env
+
+        Should be like:
+        RubyGems Environment:
+          - RUBYGEMS VERSION: 1.8.24
+          - RUBY VERSION: 1.9.3 (2012-12-25 patchlevel 362) [x86_64-darwin10.8.0]
+          - INSTALLATION DIRECTORY: /Users/admin/.rvm/gems/ruby-1.9.3-p362@project-control
+          - RUBY EXECUTABLE: /Users/admin/.rvm/rubies/ruby-1.9.3-p362/bin/ruby
+          - EXECUTABLE DIRECTORY: /Users/admin/.rvm/gems/ruby-1.9.3-p362@project-control/bin
+          - RUBYGEMS PLATFORMS:
+            - ruby
+            - x86_64-darwin-10
+          - GEM PATHS:
+             - /Users/admin/.rvm/gems/ruby-1.9.3-p362@project-control
+             - /Users/admin/.rvm/gems/ruby-1.9.3-p362@global
+          - GEM CONFIGURATION:
+             - :update_sources => true
+             - :verbose => true
+             - :benchmark => false
+             - :backtrace => false
+             - :bulk_threshold => 1000
+          - REMOTE SOURCES:
+             - http://rubygems.org/
+
+
+2) Once environment is ready:
+    2.1) Installing gem bundler
+         gem install bundler -v 1.3.5
+    2.2) Installing gem capistrano
+         gem install capistrano -v=2.15.5
+    2.3) Installing gem RVM
+         gem install rvm -v 1.11.3.8
+    2.4) Installing gem rvm-capistrano
+         gem install  rvm-capistrano -v 1.5.0
+    2.5) Installing all project gems:
+         bundle install
+
+4) Creating data base:
+    rake db:create
+5) Running migrations:
+    rake db:migrate
+6) Loading seeds:
+    rake db:seed
+
+TEST
+    1) Executing rspec tests:    rake spec
+    2) Executing cucumber tests: rake cucumber
