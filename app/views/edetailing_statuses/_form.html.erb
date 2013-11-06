@@ -1,0 +1,41 @@
+<h1>Proyecto</h1>
+<p>Rellena los campos para crear un nuevo proyecto o editar uno existente.</p>
+<div class="popup-form">
+  <div class="popup-content">
+
+    <%= form_for(@edetailing_status, remote: true)  do |f| %>
+      <div class="first_row form_row">
+        <%= f.label "Marca:" %>
+        <%= f.text_field :mark, :class => "mark_field" %>
+        <%= f.label "Producto:" %>
+        <%= f.text_field :product, :class => "product_field" %>
+        <div class="clear"></div>
+      </div>
+      <div class="second_row form_row">
+        <%= f.label "País:" %>
+        <%= f.text_field :country, :class => "country_field" %>
+        <%= f.label "Framework:" %>
+        <%= f.text_field :framework, :class => "framework_field" %>
+        <div class="clear"></div>
+      </div>
+      <div class="third_row form_row">
+        <%= f.label "Estado:" %>
+        <%= f.select(:state, [['Finalizado', 0], ['En espera', 1], ['En progreso', 2], ['No empezado', 3]]) %>
+        <div class="clear"></div>
+      </div>
+      <div class="forth_row form_row">
+        <%= f.label "Comentarios:" %>
+        <%= f.text_area :note, size: "40x12" %>
+        <div class="clear"></div>
+      </div>
+      <div class="fifth_row form_row">
+        <%= f.label "Fecha modificado:" %>
+        <%= f.date_select :last_change %>
+        <div class="clear"></div>
+      </div>
+      <%= f.submit "Guardar", :class =>"create commit btn" %>
+      <%= link_to "Cancelar", :back, :class =>"btn-cancel cancel btn" %>
+    <% end %>
+
+  </div>
+</div>

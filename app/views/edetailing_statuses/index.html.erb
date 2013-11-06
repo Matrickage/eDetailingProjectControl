@@ -1,0 +1,56 @@
+<div id="container">
+<div id="header">
+  <h1>Control de Proyectos eDetailing</h1>
+</div>
+<div id="content">
+
+
+ <%= link_to raw("<div id=\"pop\" class=\"big add-project\">Añadir proyecto</div>"), new_edetailing_status_path, remote: true %>
+
+  <div class="search-box">
+    <form>
+      <fieldset>
+        <ol>
+          <li>
+            <label for="searcher">Buscar:</label>
+            <input id="searcher" />
+            <select id="select_search">
+              <option value="product" selected="true">Producto</option>
+              <option value="country">País</option>
+              <option value="framework">Framework</option>
+            </select>
+          </li>
+        </ol>
+      </fieldset>
+    </form>
+  </div>
+
+<table class="sortable" width="100%" border="0">
+  <thead>
+    <tr>
+      <th class="mark">MARCA</th>
+      <th class="product">PRODUCTO</th>
+      <th class="country">PAÍS</th>
+      <th class="framework">FRAMEWORK</th>
+      <th class="state">ESTADO</th>
+      <th class="date">FECHA</th>
+      <th class="edit">&nbsp;</th>
+      <th class="delete">&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @edetailing_statuses.each_with_index do |edetailing_status, index| %>
+
+    <%= render partial: '/edetailing_statuses/row', locals: {edetailing_status: edetailing_status,
+                                                            index: index}%>
+
+
+    <% end %>
+    <div id="overlay_form" style="display:none;"></div>
+  </tbody>
+</table>
+
+<br>
+</div>
+</div>

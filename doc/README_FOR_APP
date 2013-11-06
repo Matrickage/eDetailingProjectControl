@@ -1,0 +1,72 @@
+Instalación del proyecto
+
+1) Creamos el entorno sobre le que vamos a trabajar (En este caso Ruby 4.0)
+
+   1.a) Si ya tenemos instalado Ruby 1.9.3-p362 hacemos lo siguiente
+        rvm ruby-1.9.3-p362@project-control --create
+
+   1.b) Si no tenemos instalado Ruby 1.9.3-p362 hacemos lo siguiente
+        rvm install ruby-1.9.3-p362  (take a relaxing cup of café con leche)
+        ATENCIÓN comprobar que se instala la gema RAKE 10.1.0, si no es así hacemos lo siguiente
+        1.b.1) rvm ruby-1.9.3-p362@global
+               gem uninstall rake
+               gem install rake -v 10.1.0
+   1.c) Una vez acabe la instalación hacemos lo siguiente
+        rvm ruby-1.9.3-p362@project-control --create
+        para no tener que cambiar de gemset manualmente nos situamos en el directorio del proyecto y ejecutamos:
+        echo 'rvm ruby-1.9.3-p362@project-control' > .rvmrc
+
+
+    Comprobamos que tenemos el entorno creado y correcto de la siguiente forma
+        gem env
+        Y nos debe aparecer algo parecido a lo siguiente
+        RubyGems Environment:
+          - RUBYGEMS VERSION: 1.8.24
+          - RUBY VERSION: 1.9.3 (2012-12-25 patchlevel 362) [x86_64-darwin10.8.0]
+          - INSTALLATION DIRECTORY: /Users/admin/.rvm/gems/ruby-1.9.3-p362@project-control
+          - RUBY EXECUTABLE: /Users/admin/.rvm/rubies/ruby-1.9.3-p362/bin/ruby
+          - EXECUTABLE DIRECTORY: /Users/admin/.rvm/gems/ruby-1.9.3-p362@project-control/bin
+          - RUBYGEMS PLATFORMS:
+            - ruby
+            - x86_64-darwin-10
+          - GEM PATHS:
+             - /Users/admin/.rvm/gems/ruby-1.9.3-p362@project-control
+             - /Users/admin/.rvm/gems/ruby-1.9.3-p362@global
+          - GEM CONFIGURATION:
+             - :update_sources => true
+             - :verbose => true
+             - :benchmark => false
+             - :backtrace => false
+             - :bulk_threshold => 1000
+          - REMOTE SOURCES:
+             - http://rubygems.org/
+
+
+2) Una vez que tengamos el entorno creado
+    2.1) Instalamos la gema del bundler
+         gem install bundler -v 1.3.5
+    2.2) Instalamos la gema de capistrano
+         gem install capistrano -v=2.15.5
+    2.3) Instalamos la gema RVM
+         gem install rvm -v 1.11.3.8
+    2.4) Instalamos la gema rvm-capistrano
+         gem install  rvm-capistrano -v 1.5.0
+    2.5) Instalamos gemas del proyecto mendiante bundler
+         bundle install
+
+4) Creamos la base de datos
+    rake db:create
+5) Corremos las migraciones necesarias
+    rake db:migrate
+6) Instalamos las semillas de datos
+    rake db:seed
+
+Ejecución de tests
+    1) Para ejecutar los tests de rspec:    rake spec
+    2) Para ejecutar los tests de cucumber: rake cucumber
+
+Notas generales:
+    Comprobar al versión de Ruby que tenemos instalada:
+    rvm list
+    Comprobar RubyGems:
+    gem env

@@ -1,0 +1,60 @@
+<div id="overlay_form" style="display:none;">
+  <h1>Proyecto</h1>
+  <p>Añade un nuevo proyecto a la lista o edita uno existente.</p>
+  <div class="popup-form">
+
+    <div class="popup-content">
+          <ol>
+            <li id="form-mark" class="string">
+              <label for="form-mark-field">Marca:</label>
+              <input id="form-mark-field" maxlength="255" name="" type="text" placeholder="ejemplo: AZ, BMS,..."/>
+            </li>
+
+            <li id="form-product" class="string">
+              <label for="form-product-field">Producto:</label>
+              <input id="form-product-field" maxlength="255" name="" type="text" placeholder="ejemplo: FORXIGA, BYETTA, BYDUREON,..."/>
+            </li>
+
+            <li id="form-country" class="string">
+              <label for="form-country-field">País:</label>
+              <input id="form-country-field" maxlength="255" name="" type="text" placeholder="ejemplo: SW, DK, ES,..."/>
+            </li>
+
+            <li id="form-framework" class="string">
+              <label for="form-framework-field">Framework:</label>
+              <input id="form-framework-field" maxlength="255" name="" type="text" placeholder="ejemplo: EXPLORIA, JUWWI,..."/>
+            </li>
+
+            <li id="form-state" class="string">
+              <label for="form-state-field">Estado:</label>
+              <select id="form-state-field" name="">
+                <option value="0">No empezado</option>
+                <option value="1">En progreso</option>
+                <option value="2">En espera</option>
+                <option value="3">Finalizado</option>
+              </select>
+            </li>
+
+            <li id="form-date" class="string">
+              <label for="form-date-field">Fecha:</label>
+              <input id="form-date-field" maxlength="255" name="" type="text" placeholder="ejemplo: 20/10/2013"/>
+            </li>
+
+            <li id="form-notes" class="string">
+              <label for="form-notes-field">Notas:</label>
+              <textarea id="form-notes-field" rows="20" name="" placeholder="Añadir información sobre incidencias, nuevos cambios, nuevas fechas... "></textarea>
+            </li>
+
+            <li class="commit"><div class="create btn">Guardar</div></li>
+            <li class="cancel"><div class="btn-cancel" id="close">Cancelar</div></li>
+
+
+
+
+          </ol>
+      <input type="hidden" value="" id="rowIdForm" />
+    </div>
+  </div>
+
+
+</div>

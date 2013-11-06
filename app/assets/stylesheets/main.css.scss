@@ -1,0 +1,290 @@
+// Place all the styles related to the EdetailingStatuses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body{
+  font-family:Verdana, Geneva, sans-serif;
+  color:#333333;
+  font-size:12px;
+  background-image:asset-url("ticks.png");
+  background-repeat:repeat;
+  margin-top:0;
+}
+#container{
+  width: 1128px;
+  margin: 0px auto;
+  border-bottom:1px solid #ccc;
+}
+
+#content{
+  width: 1008px;
+  background-color:#ffffff;
+  padding: 40px 60px 80px;
+  background-image:asset-url("bg.png");
+  background-repeat:repeat-y;
+  background-position:left top;
+  border-bottom:1px solid #ccc;
+}
+#header{
+  width: 1008px;
+  background-color:#333333;
+  padding: 10px 60px 10px;
+  height: 80px;
+  background-image:asset-url("bg-header.png");
+  background-repeat:repeat-y;
+}
+
+
+
+h1{
+  margin-bottom:30px;
+  font-size: 30px;
+  color:#ffffff;
+}
+
+form{}
+fieldset{
+  border: 0 none;
+  margin-left:0;
+  padding-left:0;
+  margin-bottom:10px;
+}
+ol{
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+label{
+  color:#bbb;
+  font-size:14px;
+}
+input{
+  border: 1px solid #CCC;
+  width: 200px;
+  height:20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding:4px;
+  color:#bbb;
+  font-size:14px;
+}
+table{
+  border-collapse:collapse;
+  margin-bottom:50px;
+}
+table tr th{
+  padding:8px 5px;
+  color:#ffffff;
+  background-color:#36acc9;
+  text-align:center;
+  font-weight:bold;
+  border-bottom:2px solid #ffffff;
+  border-right:2px solid #ffffff;
+}
+table tr td{
+  padding: 8px 5px;
+  border-right:2px solid #ffffff;
+  border-bottom:1px solid #b9e1ec;
+}
+table tr.par td{background-color:#ffffff;}
+table tr.impar td{background-color:#d9eef3;}
+table tr td.product{font-weight:bold;}
+table tr.unsolved td{
+  background-color:#ff8989;
+  border-bottom:1px solid #cb2121;
+}
+table tr td.edit{text-align:center;}
+#pop{
+  height: 26px;
+  width: 140px;
+  border: 1px transparent solid;
+  font-size: 13px;
+  color: #5e5e5e;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  padding: 11px 12px 0px;
+  outline: none;
+  background-image:asset-url("icon-plus.png");
+  background-repeat:no-repeat;
+  background-position:130px 5px;
+  background-color: #efefef;
+  text-decoration: none;
+  margin-bottom:20px;
+}
+
+#pop:hover{
+  background-color:#d0d0d0;
+  color:#ffffff;
+}
+
+/* Sortable tables */
+table.sortable thead {
+  background-color:#eee;
+  color:#666666;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Popup Form */
+#overlay_form{
+  position: absolute;
+  border: 5px solid gray;
+  padding: 24px;
+  background: white;
+  width: 600px;
+  height: 600px;
+  z-index: 1;
+}
+#overlay_form h1{
+	margin-bottom:10px;
+	color: #333333;
+}
+#overlay_form p{
+  margin-bottom:30px;
+  padding-bottom:10px;
+  border-bottom:1px solid #ccc;
+}
+
+#overlay_form textarea{
+  border: 1px solid #CCC;
+  height:60px;
+  width: 74%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding:4px;
+  color:#bbb;
+  font-size:14px;
+}
+
+#overlay_form .commit{margin-left:21%;}
+#overlay_form .commit,
+#overlay_form .cancel{
+  width:170px;
+  display:block;
+  float:left;
+}
+
+#overlay_form .btn{
+  padding: 2px 6px 3px;
+  white-space: pre;
+  height: 35px;
+  width: 140px;
+  border: 1px transparent solid;
+  font-size: 13px;
+  color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-align:center;
+  margin-left: 0px !important;
+  margin-right: 10px;
+}
+#overlay_form .create{background-color: #36acc9 !important;}
+#overlay_form .create:hover{
+  background-color:#2f86af;
+  color:#ffffff;
+}
+#overlay_form .btn-cancel{
+  padding: 2px 6px 3px;
+  white-space: pre;
+  height: 35px;
+  width: 140px;
+  border: 1px transparent solid;
+  font-size: 13px;
+  background-color: #ccc;
+  color: #efefef;
+  b-webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-align:center;
+}
+
+#overlay_form .btn-cancel:hover{
+  background-color:#999;
+  color:#fff;
+}
+#overlay_form .form_row{margin-bottom: 20px;}
+#overlay_form .form_row label{
+	display: block;
+	width: 90px;
+	float: left;
+	padding-top: 5px;
+}
+#overlay_form .form_row input{
+	display: block;
+	width: 180px;
+	float: left;
+}
+#overlay_form .mark_field,
+#overlay_form .country_field{
+	margin-right: 30px;
+}
+#overlay_form .forth_row label{
+	width: 100%;
+	margin-bottom: 5px;
+}
+#overlay_form .forth_row textarea{width: 97%;}
+#overlay_form .fifth_row label{
+	width: 140px;
+	padding-top: 3px;
+}
+
+
+
+img.add-project{cursor:pointer;}
+
+
+/* Tooltip */
+.tooltip{
+  display: inline;
+  position: relative;
+  cursor:pointer;
+}
+.tooltip:hover:after{
+  background: #333;
+  background: rgba(0,0,0,.8);
+  border-radius: 5px;
+  bottom: 26px;
+  color: #fff;
+  left: 20%;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  width: 220px;
+  content: attr(title);
+}
+.tooltip:hover:before{
+  border: solid;
+  border-color: #333 transparent;
+  border-width: 6px 6px 0 6px;
+  bottom: 20px;
+  content: "";
+  left: 50%;
+  position: absolute;
+}
+
+.clear{
+	clear: both;
+}
+
+
+//lluis
+.delete-project{
+  height: 16px;
+  width: 16px;
+  text-align:center;
+}

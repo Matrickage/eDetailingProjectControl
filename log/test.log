@@ -1,0 +1,104 @@
+  [1m[36m (112.3ms)[0m  [1mDROP DATABASE IF EXISTS `project-control_test`[0m
+  [1m[35m (63.5ms)[0m  CREATE DATABASE `project-control_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (262.6ms)[0m  [1mCREATE TABLE `edetailing_statuses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mark` varchar(255), `product` varchar(255), `country` varchar(255), `framework` varchar(255), `state` int(11), `note` text, `lastChange` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (83.1ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (108.3ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (16.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20131016083608')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (20.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (9.6ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (4.5ms)[0m  BEGIN
+  [1m[36mFixture Delete (18.3ms)[0m  [1mDELETE FROM `edetailing_statuses`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `edetailing_statuses` (`created_at`, `updated_at`, `id`) VALUES ('2013-10-17 11:24:53', '2013-10-17 11:24:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `edetailing_statuses` (`created_at`, `updated_at`, `id`) VALUES ('2013-10-17 11:24:53', '2013-10-17 11:24:53', 298486374)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------
+EdetailingStatusesControllerTest: test_should_create_edetailing_status
+----------------------------------------------------------------------
+  [1m[36mEdetailingStatus Load (0.4ms)[0m  [1mSELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (11.2ms)[0m  SELECT COUNT(*) FROM `edetailing_statuses`
+Processing by EdetailingStatusesController#create as HTML
+  Parameters: {"edetailing_status"=>{}}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------------
+EdetailingStatusesControllerTest: test_should_destroy_edetailing_status
+-----------------------------------------------------------------------
+  [1m[36mEdetailingStatus Load (0.3ms)[0m  [1mSELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `edetailing_statuses`
+Processing by EdetailingStatusesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEdetailingStatus Load (0.3ms)[0m  [1mSELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/edetailing_statuses
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `edetailing_statuses`[0m
+  [1m[35m (12.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+EdetailingStatusesControllerTest: test_should_get_edit
+------------------------------------------------------
+  [1m[35mEdetailingStatus Load (0.5ms)[0m  SELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1
+Processing by EdetailingStatusesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEdetailingStatus Load (0.3ms)[0m  [1mSELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mEdetailingStatus Load (0.2ms)[0m  SELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1
+Completed 500 Internal Server Error in 32ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------------------
+EdetailingStatusesControllerTest: test_should_get_index
+-------------------------------------------------------
+  [1m[36mEdetailingStatus Load (0.3ms)[0m  [1mSELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1[0m
+Processing by EdetailingStatusesController#index as HTML
+  [1m[35mEdetailingStatus Load (0.3ms)[0m  SELECT `edetailing_statuses`.* FROM `edetailing_statuses`
+  Rendered edetailing_statuses/_row.html.erb (20.8ms)
+  Rendered edetailing_statuses/_row.html.erb (0.5ms)
+Completed 200 OK in 1694ms (Views: 1692.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+EdetailingStatusesControllerTest: test_should_get_new
+-----------------------------------------------------
+  [1m[36mEdetailingStatus Load (0.3ms)[0m  [1mSELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1[0m
+Processing by EdetailingStatusesController#new as HTML
+  Rendered edetailing_statuses/_form.html.erb (60.1ms)
+Completed 200 OK in 106ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------------------------------------
+EdetailingStatusesControllerTest: test_should_show_edetailing_status
+--------------------------------------------------------------------
+  [1m[35mEdetailingStatus Load (0.3ms)[0m  SELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1
+Processing by EdetailingStatusesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEdetailingStatus Load (0.3ms)[0m  [1mSELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1[0m
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------------------------
+EdetailingStatusesControllerTest: test_should_update_edetailing_status
+----------------------------------------------------------------------
+  [1m[35mEdetailingStatus Load (0.3ms)[0m  SELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1
+Processing by EdetailingStatusesController#update as HTML
+  Parameters: {"edetailing_status"=>{}, "id"=>"980190962"}
+  [1m[36mEdetailingStatus Load (0.4ms)[0m  [1mSELECT `edetailing_statuses`.* FROM `edetailing_statuses` WHERE `edetailing_statuses`.`id` = 980190962 LIMIT 1[0m
+Completed 400 Bad Request in 6ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

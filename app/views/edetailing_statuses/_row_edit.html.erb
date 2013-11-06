@@ -1,0 +1,9 @@
+<td class="mark"><%= edetailing_status.mark %></td>
+<td class="product"><%= edetailing_status.product %></td>
+<td class="country"><%= edetailing_status.country %></td>
+<td class="framework"><%= edetailing_status.framework %></td>
+<td class="state">
+  <span class="tooltip" title="<%= edetailing_status.note %>"><%= estado(edetailing_status.state) %></span></td>
+<td class="date"><%= fecha(edetailing_status.last_change) %></td>
+<td class="edit"><%= link_to image_tag('icon-edit.png', :class => 'edit-project'), edit_edetailing_status_path(edetailing_status), remote: true %></td>
+<td class="edit"><%= link_to image_tag('icon-delete.png', :class => 'delete-project'), edetailing_status_path(edetailing_status), method: :delete, data: { confirm: '¿Seguro que quieres eliminar el registro?' }, remote: true %></td>

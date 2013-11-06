@@ -1,0 +1,2 @@
+$("#project_<%=@edetailing_status.id%>").html("<%= escape_javascript(render partial: 'edetailing_statuses/row_edit', locals: {edetailing_status: @edetailing_status })%> ");
+$("#overlay_form").fadeOut(600);
