@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbaf2d9d-7b04-48d8-894e-f514e2da5806" name="Default" comment="" />
+    <list default="true" id="bbaf2d9d-7b04-48d8-894e-f514e2da5806" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/README_FOR_APP_EN" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="eDetailingProjectControlMatrickage.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bbaf2d9d-7b04-48d8-894e-f514e2da5806" time="1383736633950" ignored="false" />
+    <file path="/README_FOR_APP_EN" changelist="bbaf2d9d-7b04-48d8-894e-f514e2da5806" time="1383738046110" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README_FOR_APP" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README_FOR_APP" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/doc/README_FOR_APP">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="41" selection-start="510" selection-end="510" vertical-scroll-proportion="-0.33096927">
+            <state line="10" column="41" selection-start="0" selection-end="2807" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README_FOR_APP_EN" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doc/README_FOR_APP_EN">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="75" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.43735224">
               <folding />
             </state>
           </provider>
@@ -76,6 +89,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/doc/README_FOR_APP_EN" />
       </list>
     </option>
   </component>
@@ -545,7 +559,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/README_FOR_APP">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="510" selection-end="510" vertical-scroll-proportion="-0.33096927">
+        <state line="10" column="41" selection-start="0" selection-end="2807" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/README_FOR_APP_EN">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="75" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.43735224">
           <folding />
         </state>
       </provider>
