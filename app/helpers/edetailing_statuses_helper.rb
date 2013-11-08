@@ -24,4 +24,8 @@ module EdetailingStatusesHelper
   def status_class(state)
     state == 1 ? 'unsolved' : ''
   end
+  def link_class(link)
+    link == '' ? '' : 'active'
+  end
+
 end
