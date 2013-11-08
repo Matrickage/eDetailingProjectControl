@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131108080833) do
+ActiveRecord::Schema.define(version: 20131108100406) do
 
   create_table "edetailing_statuses", force: true do |t|
     t.string   "mark"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20131108080833) do
     t.datetime "updated_at"
     t.string   "project_manager"
     t.string   "modified_by"
+    t.string   "box_link"
+    t.string   "basecamp_link"
   end
 
   create_table "users", force: true do |t|
