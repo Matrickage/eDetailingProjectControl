@@ -181,6 +181,16 @@ table tr.unsolved td{
   background-color:#ffdf8a;
   border-bottom:1px solid #ff9103;
 }
+table tr td.box{text-align:center;}
+table tr td.box img{
+  width: 18px;
+  height: 18px;
+}
+table tr td.basecamp{text-align:center;}
+table tr td.basecamp img{
+  width: 18px;
+  height: 18px;
+}
 table tr td.edit{text-align:center;}
 #pop{
   height: 26px;
