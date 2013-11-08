@@ -2,7 +2,82 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//Sign in layout
 
+.login-layout{
+  display: block;
+  width: 474px;
+  margin: 100px auto 30px;
+  padding: 25px 25px 50px 25px;
+  background-color: #ffffff;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-layout .field{
+  margin-bottom: 20px;
+  width: 100%;
+  display: block;
+}
+.login-layout label{
+  display: block;
+  float: left;
+  width: 75px;
+  padding-top: 5px;
+}
+.login-layout input{
+  display: block;
+  float: left;
+  width: 330px;
+}
+.login-layout .field-remember{margin-bottom: 10px;}
+.sign-in-layout .field-remember input.check{width: 20px;}
+.sign-in-layout .field-remember label.check-field{width: 180px;}
+.sign-in-layout .btn input{
+  width: 80px;
+  padding: 5px 10px 25px 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.sign-in-layout .btn input:hover{background-color: #939393;}
+.pass-layout .btn input{
+  width: 290px;
+  padding: 5px 10px 25px 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.login-layout a{
+  text-decoration: none;
+  color: #28a8d2;
+}
+.login-layout a:hover{color: #0080aa;}
+p.alert{
+  text-align: center;
+  color: #c22121;
+  font-weight: bold;
+}
+p.notice{
+  text-align: center;
+  color: #1f9b06;
+  font-weight: bold;
+}
+#error_explanation{
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ffe1dd;
+  border: 1px solid #c22121;
+  border-radius: 2px 2px 2px 2px;
+}
+#error_explanation p{
+  color: #c22121;
+  font-weight: bold;
+}
+#error_explanation ul li{color: #c22121;}
+
+//General
 body{
   font-family:Verdana, Geneva, sans-serif;
   color:#333333;
@@ -41,6 +116,14 @@ h1{
   margin-bottom:30px;
   font-size: 30px;
   color:#ffffff;
+}
+
+h2{
+  font-family: 'CreteRoundRegular';
+  font-size: 40px;
+  color: #494949;
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
 
 form{}
@@ -277,9 +360,7 @@ img.add-project{cursor:pointer;}
   position: absolute;
 }
 
-.clear{
-	clear: both;
-}
+.clear{clear: both;}
 
 
 //lluis
