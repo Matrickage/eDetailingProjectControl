@@ -26,11 +26,18 @@
         <div class="clear"></div>
       </div>
       <div class="forth_row form_row">
+        <%= f.label "Box Link:" %>
+        <%= f.text_field :box_link, :class => "box_link_field" %>
+        <%= f.label "Basecamp Link:" %>
+        <%= f.text_field :basecamp_link, :class => "basecamp_link_field" %>
+        <div class="clear"></div>
+      </div>
+      <div class="fifth_row form_row">
         <%= f.label "Comentarios:" %>
         <%= f.text_area :note, size: "40x12" %>
         <div class="clear"></div>
       </div>
-      <div class="fifth_row form_row">
+      <div class="sixth_row form_row">
         <%= f.label "Fecha modificado:" %>
         <%= f.date_select :last_change %>
         <div class="clear"></div>
