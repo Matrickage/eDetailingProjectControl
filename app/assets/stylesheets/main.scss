@@ -93,28 +93,30 @@ body{
 }
 
 #content{
-  width: 1008px;
+  width: 1004px;
   background-color:#ffffff;
-  padding: 40px 60px 80px;
-  background-image:asset-url("bg.png");
-  background-repeat:repeat-y;
-  background-position:left top;
-  border-bottom:1px solid #ccc;
+  padding: 40px 60px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 #header{
-  width: 1008px;
+  width: 1004px;
   background-color:#333333;
-  padding: 10px 60px 10px;
+  padding: 25px 60px 10px;
   height: 80px;
-  background-image:asset-url("bg-header.png");
-  background-repeat:repeat-y;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
 
 h1{
-  margin-bottom:30px;
-  font-size: 30px;
+  font-family: 'CreteRoundRegular';
+  margin: 0px;
+  padding: 0px;
+  font-size: 50px;
   color:#ffffff;
 }
 
@@ -156,6 +158,7 @@ input{
 table{
   border-collapse:collapse;
   margin-bottom:50px;
+  border-bottom: 5px solid #b9e1ec;
 }
 table tr th{
   padding:8px 5px;
@@ -175,8 +178,8 @@ table tr.par td{background-color:#ffffff;}
 table tr.impar td{background-color:#d9eef3;}
 table tr td.product{font-weight:bold;}
 table tr.unsolved td{
-  background-color:#ff8989;
-  border-bottom:1px solid #cb2121;
+  background-color:#ffdf8a;
+  border-bottom:1px solid #ff9103;
 }
 table tr td.edit{text-align:center;}
 #pop{
@@ -184,7 +187,7 @@ table tr td.edit{text-align:center;}
   width: 140px;
   border: 1px transparent solid;
   font-size: 13px;
-  color: #5e5e5e;
+  color: #ffffff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -195,14 +198,15 @@ table tr td.edit{text-align:center;}
   background-image:asset-url("icon-plus.png");
   background-repeat:no-repeat;
   background-position:130px 5px;
-  background-color: #efefef;
+  background-color: #36acc9;
   text-decoration: none;
   margin-bottom:20px;
 }
 
 #pop:hover{
-  background-color:#d0d0d0;
+  background-color:#1396b6;
   color:#ffffff;
+  border: 1px solid #107b95;
 }
 
 /* Sortable tables */
@@ -278,9 +282,9 @@ table.sortable thead {
   color:#ffffff;
 }
 #overlay_form .btn-cancel{
-  padding: 2px 6px 3px;
+  padding: 8px 6px 3px;
   white-space: pre;
-  height: 35px;
+  height: 22px;
   width: 140px;
   border: 1px transparent solid;
   font-size: 13px;
@@ -369,3 +373,5 @@ img.add-project{cursor:pointer;}
   width: 16px;
   text-align:center;
 }
+
+a:-webkit-any-link{text-decoration: none;}
