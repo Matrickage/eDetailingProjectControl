@@ -181,20 +181,20 @@ table tr th{
   text-align:center;
   font-family: 'CreteRoundRegular';
   font-size: 15px;
-  //border-bottom:1px dotted #ffffff;
-  border-right:1px dotted #ffffff;
+  border-bottom:1px dotted #5c5c5c;
+  border-right:1px dotted #5c5c5c;
 }
 table tr td{
   padding: 8px 5px;
   border-right:1px dotted #ffffff;
-  //border-bottom:1px dotted #b9e1ec;
+  border-bottom:1px dotted #ffffff;
 }
 table tr.par td{background-color:#ffffff;}
-table tr.impar td{background-color:#d9eef3;}
+table tr.impar td{background-color:#f7fbff;}
 table tr td.product{font-weight:bold;}
 table tr.unsolved td{
   background-color:#ffdf8a;
-  //border-bottom:1px solid #ff9103;
+  border-bottom:1px dotted #ffffff;
 }
 table tr td.box{text-align:center;}
 table tr td.box img{
