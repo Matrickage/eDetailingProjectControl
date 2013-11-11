@@ -1,12 +1,14 @@
 <div id="container">
 <div id="header">
-  <h1>Control de Proyectos eDetailing</h1>
-  <div id="logout"><%=  link_to "Log out", destroy_user_session_path, :method => :delete %></div>
+  <header>
+    <h1>Control de Proyectos eDetailing</h1>
+    <div id="logout"><%=  link_to "Log out", destroy_user_session_path, :method => :delete %></div>
+  </header>
 </div>
 <div id="content">
 
 
- <%= link_to raw("<div id=\"pop\" class=\"big add-project\">Añadir proyecto</div>"), new_edetailing_status_path, remote: true %>
+ <%= link_to raw("<div id=\"pop\" class=\"big add-project\">Añadir proyecto</div>"), new_edetailing_status_path, :class =>"btn-new-project", remote: true %>
 
   <div class="search-box">
     <form>
@@ -29,13 +31,13 @@
 <table class="sortable" width="100%" border="0">
   <thead>
     <tr>
-      <th class="mark">MARCA</th>
-      <th class="product">PRODUCTO</th>
-      <th class="country">PAÍS</th>
-      <th class="framework">FRAMEWORK</th>
+      <th class="mark">Marca</th>
+      <th class="product">Producto</th>
+      <th class="country">País</th>
+      <th class="framework">Framework</th>
       <th class="project_manager">PM</th>
-      <th class="state">ESTADO</th>
-      <th class="date">FECHA</th>
+      <th class="state">Estado</th>
+      <th class="date">Fecha</th>
       <th class="box">&nbsp;</th>
       <th class="basecamp">&nbsp;</th>
       <th class="edit">&nbsp;</th>

@@ -34,7 +34,10 @@
 }
 .login-layout .field-remember{margin-bottom: 10px;}
 .sign-in-layout .field-remember input.check{width: 20px;}
-.sign-in-layout .field-remember label.check-field{width: 180px;}
+.sign-in-layout .field-remember label.check-field{
+  width: 180px;
+  padding-top: 2px;
+}
 .sign-in-layout .btn input{
   width: 80px;
   padding: 5px 10px 25px 10px;
@@ -171,25 +174,27 @@ table{
   border-bottom: 5px solid #b9e1ec;
 }
 table tr th{
-  padding:8px 5px;
+  padding:12px 5px;
   color:#ffffff;
-  background-color:#36acc9;
+  //background-color:#36acc9;
+  background-color:#333;
   text-align:center;
-  font-weight:bold;
-  border-bottom:2px solid #ffffff;
-  border-right:2px solid #ffffff;
+  font-family: 'CreteRoundRegular';
+  font-size: 15px;
+  //border-bottom:1px dotted #ffffff;
+  border-right:1px dotted #ffffff;
 }
 table tr td{
   padding: 8px 5px;
-  border-right:2px solid #ffffff;
-  border-bottom:1px solid #b9e1ec;
+  border-right:1px dotted #ffffff;
+  //border-bottom:1px dotted #b9e1ec;
 }
 table tr.par td{background-color:#ffffff;}
 table tr.impar td{background-color:#d9eef3;}
 table tr td.product{font-weight:bold;}
 table tr.unsolved td{
   background-color:#ffdf8a;
-  border-bottom:1px solid #ff9103;
+  //border-bottom:1px solid #ff9103;
 }
 table tr td.box{text-align:center;}
 table tr td.box img{
@@ -210,6 +215,10 @@ table tr td.basecamp img{
   height: 18px;
 }
 table tr td.edit{text-align:center;}
+a.btn-new-project{
+  width: 140px;
+  display: block;
+}
 #pop{
   height: 26px;
   width: 140px;
@@ -306,7 +315,7 @@ table.sortable thead {
 }
 #overlay_form .create{background-color: #36acc9 !important;}
 #overlay_form .create:hover{
-  background-color:#2f86af;
+  background-color:#1396b6 !important;
   color:#ffffff;
 }
 #overlay_form .btn-cancel{
@@ -345,17 +354,21 @@ table.sortable thead {
 	float: left;
 }
 #overlay_form .mark_field,
-#overlay_form .country_field{
+#overlay_form .country_field,
+#overlay_form .project_manager_field,
+#overlay_form #edetailing_status_box_link{
 	margin-right: 30px;
 }
-#overlay_form .forth_row label{
-	width: 100%;
-	margin-bottom: 5px;
-}
+#overlay_form .sixth_row label{width: 140px;}
 #overlay_form .forth_row textarea{width: 97%;}
 #overlay_form .fifth_row label{
-	width: 140px;
+	width: 100%;
 	padding-top: 3px;
+    margin-bottom: 5px;
+}
+#overlay_form .fifth_row textarea{
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 
