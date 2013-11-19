@@ -69,6 +69,6 @@ class EdetailingStatusesController < ApplicationController
       @edetailing_status.update!(modified_by: current_user.email)
     end
   def send_email
-    EdetailingMailer.changed_notify_email(@edetailing_status.mark,@edetailing_status.product,@edetailing_status.country,current_user.email).deliver
+    EdetailingMailer.delay.changed_notify_email(@edetailing_status.mark,@edetailing_status.product,@edetailing_status.country,current_user.email)
   end
 end

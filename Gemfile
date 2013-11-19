@@ -43,6 +43,9 @@ gem 'devise'
 
 gem "capistrano", "~> 3.0.1"
 
+gem 'delayed_job_active_record', '4.0.0'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
