@@ -40,12 +40,14 @@ class EdetailingStatusesController < ApplicationController
         format.html { render action: 'new' }
         format.json { render json: @edetailing_status.errors, status: :unprocessable_entity }
       end
+      send_email
     end
   end
 
   def update
       @edetailing_status.update(edetailing_status_params)
       set_current_user
+      send_email
   end
 
   def destroy
@@ -66,4 +68,7 @@ class EdetailingStatusesController < ApplicationController
     def set_current_user
       @edetailing_status.update!(modified_by: current_user.email)
     end
+  def send_email
+    EdetailingMailer.changed_notify_email(@edetailing_status.mark,@edetailing_status.product,@edetailing_status.country,current_user.email).deliver
+  end
 end
