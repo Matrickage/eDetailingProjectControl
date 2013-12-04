@@ -59,4 +59,5 @@ ProjectControl::Application.routes.draw do
 
   root 'edetailing_statuses#index'
   resources :edetailing_statuses, :only => [:new, :update, :destroy]
+  resources :project_status
 end
