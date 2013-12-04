@@ -1,2 +1,30 @@
 $("#overlay_form").html("<%= escape_javascript(render partial: 'edetailing_statuses/form')%> ");
 $("#overlay_form").fadeIn(600);
+var wysihtml5ParserRules = {
+    tags: {
+        strong: {},
+        b:      {},
+        i:      {},
+        em:     {},
+        br:     {},
+        p:      {},
+        div:    {},
+        span:   {},
+        ul:     {},
+        ol:     {},
+        li:     {},
+        a:      {
+            set_attributes: {
+                target: "_blank",
+                rel:    "nofollow"
+            },
+            check_attributes: {
+                href:   "url" // important to avoid XSS
+            }
+        }
+    }
+};
+var editor = new wysihtml5.Editor("textarea", {
+    toolbar:      "toolbar",
+    parserRules:  wysihtml5ParserRules
+});
