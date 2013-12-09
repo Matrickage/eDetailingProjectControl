@@ -4,8 +4,8 @@
   <td class="country"><%= edetailing_status.country %></td>
   <td class="framework"><%= edetailing_status.framework %></td>
   <td class="project_manager"><%= edetailing_status.project_manager %></td>
-  <td class="state">
-    <span class="tooltip" title="<%= edetailing_status.note %>"><%= estado(edetailing_status.state) %></span></td>
+  <td class="state"><%= link_to  estado(edetailing_status.state), project_status_path(edetailing_status.note), remote: true %></td>
+    <!--<span class="tooltip" title="<%#= edetailing_status.note %>"><%#= estado(edetailing_status.state) %></span></td>-->
   <td class="date"><%= fecha(edetailing_status.last_change) %></td>
   <td class="box"><%= link_to image_tag('icon-box.png', :class => 'box_class '+link_class(edetailing_status.box_link) ), edetailing_status.box_link, target: '_blank' %></td>
   <td class="basecamp"><%= link_to image_tag('icon-basecamp.png', :class => 'basecamp-class '+link_class(edetailing_status.basecamp_link)), edetailing_status.basecamp_link, target: '_blank' %></td>

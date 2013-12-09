@@ -34,7 +34,12 @@
       </div>
       <div class="fifth_row form_row">
         <%= f.label "Comentarios:" %>
-        <%= f.text_area :note, size: "40x12" %>
+        <div id="toolbar" style="display: none;">
+          <a data-wysihtml5-command="bold" title="CTRL+B">bold</a> |
+          <a data-wysihtml5-command="italic" title="CTRL+I">italic</a>
+          <a data-wysihtml5-action="change_view">switch to html view</a>
+        </div>
+        <%= f.text_area :note, :id => "textarea", size: "40x12" %>
         <div class="clear"></div>
       </div>
       <div class="sixth_row form_row">
